@@ -1,0 +1,157 @@
+{
+   "scenarios":[
+      {
+         "action_instances":[
+            {
+               "id":1581,
+               "lib":"mashape",
+               "name":"send-sms",
+               "params":{
+                  "from":"<free>",
+                  "message":"Thank you for your gift, I really appreciate your kindness.",
+                  "to":"111 555 777"
+               }
+            }
+         ],
+         "id":1,
+         "nl_command_statment":"Please send this sms to my friend John: Thank you for your gift, I really appreciate your kindness."
+      },
+      {
+         "action_instances":[
+            {
+               "id":1,
+               "lib":"internal",
+               "name":"Get file text",
+               "params":{
+                  "file":"question.txt"
+               }
+            },
+            {
+               "id":2,
+               "lib":"newmashape",
+               "name":"Translate Text",
+               "params":{
+                  "languageConverted":"en",
+                  "languageToConvert":"pt",
+                  "text":"<return-step1>"
+               }
+            },
+            {
+               "id":30,
+               "lib":"extracted",
+               "name":"Send an email",
+               "params":{
+                  "attachments":"<empty>",
+                  "body":"<return-step2>",
+                  "subject":"<free>",
+                  "to address":"sandra@andrade.com.br"
+               }
+            }
+         ],
+         "id":2,
+         "nl_command_statment":"Read the content of \"question.txt\". Translate it to Portuguese and then send an email to my friend Sandra asking her to review the document, please."
+      },
+      {
+         "alternative":{
+            "id":30,
+            "lib":"extracted",
+            "name":"Send an email",
+            "params":{
+               "attachments":"<empty>",
+               "body":"Thanks, but I am not interested.",
+               "subject":"<free>",
+               "to address":"enrico@hernandez.cl"
+            }
+         },
+         "condition":"<return-step2> < 100",
+         "consequent":{
+            "id":30,
+            "lib":"extracted",
+            "name":"Send an email",
+            "params":{
+               "attachments":"<empty>",
+               "body":"Please, buy it",
+               "subject":"<free>",
+               "to address":"enrico@hernandez.cl"
+            }
+         }
+      },
+      {
+         "action_instances":[
+            {
+               "id":1832,
+               "lib":"mashape",
+               "name":"search-channel-php",
+               "params":{
+                  "accept":"<empty>",
+                  "query":"Bachianas N.5 of Villa-Lobos"
+               }
+            },
+            {
+               "id":30,
+               "lib":"extracted",
+               "name":"Send an email",
+               "params":{
+                  "attachments":"<empty>",
+                  "body":"<return-step1>",
+                  "subject":"I love you",
+                  "to address":"cristina@avilla.com"
+               }
+            }
+         ],
+         "id":5,
+         "nl_command_statment":"Search for \"Bachianas N.5 of Villa-Lobos\" in Youtube and send it to my mother via email with the subject \"I love you\"."
+      },
+      {
+         "action_instances":[
+            {
+               "id":71,
+               "lib":"newmashape",
+               "name":"Tumblr Image Search",
+               "params":{
+                  "callback":"<empty>",
+                  "p":"<empty>",
+                  "q":"BMW logo"
+               }
+            },
+            {
+               "id":80,
+               "lib":"extracted",
+               "name":"Share a link.",
+               "params":{
+                  "comment":"I got accepted for an internship at BMW.",
+                  "image url":"<return-step1>",
+                  "link url":"<empty>"
+               }
+            }
+         ],
+         "id":6,
+         "nl_command_statment":"Search in Tumblr for the BMW logo. Publish it with the following text in your Linkedin account: I got accepted for an internship at BMW."
+      },
+      {
+         "action_instances":[
+            {
+               "id":71,
+               "lib":"newmashape",
+               "name":"Tumblr Image Search",
+               "params":{
+                  "callback":"<empty>",
+                  "p":"<empty>",
+                  "q":"Darth Vader"
+               }
+            },
+            {
+               "id":90,
+               "lib":"extracted",
+               "name":"Create a link post",
+               "params":{
+                  "comment":"Hi friends, let's watch Star Wars next Friday.",
+                  "link url":"<return-step1>"
+               }
+            }
+         ],
+         "id":7,
+         "nl_command_statment":"Search for a photo of Darth Vader. Post it on Facebook with the message \"Hi friends, let's watch Star Wars next Friday\"."
+      }
+   ]
+}

@@ -1,0 +1,60 @@
+{
+   "agenda":[
+      {
+         "address":"Rua Central, 35, Rio de Janeiro, Brasil",
+         "mail":"maria@alice.com.br",
+         "name":"Maria Alice",
+         "phone":"555 111 222",
+         "tags":null
+      },
+      {
+         "address":"7 North Avenue, New York, USA",
+         "mail":"john@smith.com",
+         "name":"John Smith",
+         "phone":"111 555 777",
+         "tags":null
+      },
+      {
+         "address":"Rua das Rosas, 10, Rio de Janeiro, Brasil",
+         "mail":"sandra@andrade.com.br",
+         "name":"Sandra Andrade",
+         "phone":"555 222 999",
+         "tags":null
+      },
+      {
+         "address":"Calle Catedral 39, Santiago, Chile",
+         "mail":"enrico@hernandez.cl",
+         "name":"Enrico Hernandez",
+         "phone":"444 666 333",
+         "tags":null
+      },
+      {
+         "address":"Calle San Pablo 22, Santiago, Chile",
+         "mail":"carmen@souza.cl",
+         "name":"Carmen Souza",
+         "phone":"777 888 999",
+         "tags":null
+      },
+      {
+         "address":"60 South Avenue, California, USA",
+         "mail":"newton@sebastian.com",
+         "name":"Newton Sebastian",
+         "phone":"999 888 555",
+         "tags":null
+      },
+      {
+         "address":"78 Goldsmith Street Albuquerque, New Mexico, USA",
+         "mail":"cristina@avilla.com",
+         "name":"Cristina Avilla",
+         "phone":"458 451 111",
+         "tags":"mom"
+      },
+      {
+         "address":"88 Germany Avenue, Atlanta, Georgia, USA",
+         "mail":"george@semanticmail.com",
+         "name":"George Brown",
+         "phone":"452 174 555",
+         "tags":"my data, myself"
+      }
+   ]
+}
